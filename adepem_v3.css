@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+.row {
+}
+
+.blue_back {
+  background: #165F9B;
+  z-index: 1;
+  height: 20vh;
+}
+
+  .blue_back .container .row {
+    margin: 12px 0 !important;
+  }
+
+.breadcrmb, .breadcrmb a {
+  color: white;
+}
+  .breadcrmb {
+    /*border: 1px solid green; */
+  }
+  .breadcrmb a:hover {
+    text-decoration: none;
+  }
+
+.annouce_banner {
+  /*border: 1px solid red;*/
+  background: white;
+  border-radius: 10px;
+  z-index: 50;
+}
+  .pic_presentation {
+    padding: 0 !important;
+    /*border: 1px solid yellow;*/
+  }
+
+.grey_back1, .grey_back2 {
+  background: #F1F4F7;
+  z-index: 1;
+}
+
+.white_back1, .white_back2 {
+  background: white;
+  z-index: 1;
+}
