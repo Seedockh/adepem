@@ -7,7 +7,6 @@ body {
 
 .blue_back {
   background: #165F9B;
-  z-index: 1;
   height: 20vh;
 }
 
@@ -29,7 +28,6 @@ body {
   /*border: 1px solid red;*/
   background: white;
   border-radius: 10px;
-  z-index: 50;
 }
   .pic_presentation {
     padding: 0 !important;
@@ -38,10 +36,24 @@ body {
 
 .grey_back1, .grey_back2 {
   background: #F1F4F7;
-  z-index: 1;
+}
+
+.grey_back1 {
+  height: 60vh;
+}
+
+.white_back1 {
+  height: 40vh;
+}
+
+.grey_back2 {
+  height: 40vh;
+}
+
+.white_back2 {
+  height: 50vh;
 }
 
 .white_back1, .white_back2 {
   background: white;
-  z-index: 1;
 }
