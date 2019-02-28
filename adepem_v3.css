@@ -18,14 +18,13 @@ body {
   color: white;
 }
   .breadcrmb {
-    /*border: 1px solid green; */
+    padding-top: 1em !important;
   }
   .breadcrmb a:hover {
     text-decoration: none;
   }
 
 .annouce_banner {
-  /*border: 1px solid red;*/
   position: relative;
   background: white;
   border-radius: 10px;
@@ -37,11 +36,11 @@ body {
 
   }
   .pic_presentation {
+    width: 100%;
     border-radius: 10px 0 0 10px;
-    /*border: 1px solid yellow;*/
   }
 
-  .text_presentaton {
+  .text_presentation {
     padding: 0 2em;
   }
 
@@ -53,20 +52,19 @@ body {
     }
 
 .grey_back1, .grey_back2 {
-  background: linear-gradient(white, #F1F4F7);
+  background: linear-gradient(#f8f8fa, #e2e6f1);
 }
 
 .white_back1, .white_back2 {
-  background: white;
+  background: #fcfdfe;
 }
 
 .grey_back1 {
-  height: 60vh;
-  border: 1px solid lightblue;
 }
 
   .title_pieces {
-    padding-top: 10em;
+    padding-top: 9em;
+    padding-bottom: 0 !important;
   }
 
   .search_input{
@@ -77,9 +75,110 @@ body {
     border: 0 !important;
   }
 
+  .pieces_list, .brands_list {
+    margin-top: 2em;
+  }
+
+    .pieces_list_line,.brands_list_line {
+      margin-bottom: 1em;
+    }
+
+      .pieces_list_line div a img {
+        margin: 1em 1em;
+        width: 70px;
+      }
+
+        .piece p {
+          background: white;
+          border-radius: 5px;
+          box-shadow: 5px 5px 7px #e2e6f1;
+        }
+
+          .piece p a {
+            color: grey;
+          }
+
+            .piece p a:hover {
+              text-decoration: none;
+            }
+
+  .show_more_pieces {
+    color: white !important;
+    background: linear-gradient(#ffb84d, #ff9900) !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    margin-top: 2em;
+    padding: 0.8em 1.3em;
+  }
+
+  .guarantees {
+    margin: 4em 0 2em 0;
+
+  }
+    .guarantees div div {
+      position: relative;
+      z-index: 1;
+    }
+      .guarantees_icon {
+        position: absolute;
+        z-index: 4;
+      }
+
+      .guarantees_infos {
+        position: absolute;
+        margin-left: -3.7em;
+        margin-top: -1.6em;
+        padding: 1em 3em;
+        border: 1px solid #cfd1d6;
+        border-radius: 5px;
+        z-index: 1;
+      }
+
+    .blue_icon {
+      background: linear-gradient(to right,#007399,#0099cc);
+      width: 4em;
+      height: 4em;
+      border-radius: 7px;
+      position: relative;
+    }
+      .blue_icon img {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
 .white_back1 {
-  height: 40vh;
 }
+  .title_brands {
+    padding-top: 3em;
+    padding-bottom: 0 !important;
+  }
+
+  .brand p {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #f5f7fa;
+  }
+
+  .brand p a {
+    color: grey;
+  }
+    .brand a:hover {
+      text-decoration: none;
+    }
+
+  .show_more_brands {
+    color: grey !important;
+    background: #f8f8f8;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 3px !important;
+    margin-top: 2em;
+    padding: 0.8em 1.3em;
+  }
+
 
 .grey_back2 {
   height: 40vh;
