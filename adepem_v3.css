@@ -1,8 +1,8 @@
 body {
   margin: 0;
-}
-
-.row {
+  color: #606873;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 14px;
 }
 
 .blue_back {
@@ -19,6 +19,7 @@ body {
 }
   .breadcrmb {
     padding-top: 1em !important;
+    font-size: 11px;
   }
   .breadcrmb a:hover {
     text-decoration: none;
@@ -178,6 +179,30 @@ body {
     margin-top: 2em;
     padding: 0.8em 1.3em;
   }
+
+  .contact_devis {
+    color: white;
+    background: linear-gradient(to right,#007399,#0099cc);
+    border-radius: 7px;
+    display: table-cell !important;
+    vertical-align: middle !important;
+  }
+
+    .devis_intro {
+      border: 1px solid red;
+    }
+    .devis_button {
+      border: 1px solid yellow;
+      color: white !important;
+      background: linear-gradient(#ffb84d, #ff9900) !important;
+      border: 0 !important;
+      border-radius: 3px !important;
+      margin-top: 2em;
+      padding: 0.8em 1.3em;
+    }
+    .devis_phone {
+      border: 1px solid lightgreen;
+    }
 
 
 .grey_back2 {
