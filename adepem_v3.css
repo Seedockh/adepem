@@ -1,3 +1,6 @@
+/*******************************************************************************/
+/*                        GLOBAL STYLES                                        */
+/*******************************************************************************/
 body {
   margin: 0;
   color: #606873;
@@ -5,6 +8,25 @@ body {
   font-size: 14px;
 }
 
+/*******  TEXT FORMAT *******/
+.orange_text {
+  color: orange;
+}
+.bold_text {
+  font-weight: bold;
+}
+
+/****** BACKGROUNDS *******/
+.grey_back1, .grey_back2 {
+  background: linear-gradient(#f8f8fa, #e2e6f1);
+}
+
+.white_back1, .white_back2 {
+  background: #fcfdfe;
+}
+
+
+/*******  SEARCH FIELDS *******/
 .search_input {
   border: 1px solid rgba(207, 209, 214, .5);
   border-radius: 5px;
@@ -23,6 +45,7 @@ body {
     border: 0 !important;
   }
 
+/*******  SORT BUTTON  *******/
 .sort_piece, .sort_brand {
   padding: 0 !important;
 }
@@ -34,6 +57,11 @@ body {
   color: #606873 !important;
 }
 
+/*******************************************************************************/
+/*                        FIRST BLOCK : BLUE                                   */
+/*******************************************************************************/
+
+/*******  BLUE BACKGROUND *******/
 .blue_back {
   background: #165F9B;
   height: 20vh;
@@ -43,6 +71,7 @@ body {
     margin: 12px 0 !important;
   }
 
+/*******  BREADCRUMB *******/
 .breadcrmb, .breadcrmb a {
   color: white;
 }
@@ -54,6 +83,7 @@ body {
     text-decoration: none;
   }
 
+/*******  INFOS BANNER  *******/
 .annouce_banner {
   position: relative;
   background: white;
@@ -74,59 +104,48 @@ body {
     padding: 0 2em;
   }
 
-    .orange_text {
-      color: orange;
-    }
-    .bold_text {
-      font-weight: bold;
-    }
 
-.grey_back1, .grey_back2 {
-  background: linear-gradient(#f8f8fa, #e2e6f1);
-}
-
-.white_back1, .white_back2 {
-  background: #fcfdfe;
-}
-
+/*******************************************************************************/
+/*                         SECOND BLOCK : GREY N°1                             */
+/*******************************************************************************/
 .grey_back1 {
 }
 
+/******* TITLE + SEARCH + SORT *******/
   .title_pieces {
     margin-top: 9em;
   }
-  .title_pieces div h3 {
-    line-height: 0 !important;
-  }
+    .title_pieces div h3 {
+      line-height: 0 !important;
+    }
 
+/******* PIECES LIST *******/
   .pieces_list, .brands_list {
     margin-top: 2em;
   }
-
     .pieces_list_line,.brands_list_line {
       margin-bottom: 1em;
     }
-
       .pieces_list_line div a img {
         margin: 1em 1em;
         width: 70px;
       }
 
+/******* INDIVIDUAL PIECES *******/
         .piece p {
           background: white;
           border-radius: 5px;
           box-shadow: 5px 5px 7px #e2e6f1;
         }
-
           .piece p a {
             color: grey;
           }
-
             .piece p a:hover {
               text-decoration: none;
             }
 
-  .show_more_pieces {
+/******* "SHOW MORE" BUTTON *******/
+  .show_more_pieces  {
     color: white !important;
     background: linear-gradient(#ffb84d, #ff9900) !important;
     border: 0 !important;
@@ -135,6 +154,7 @@ body {
     padding: 0.8em 1.3em;
   }
 
+/******* 3 GUARANTEES ROW *******/
   .guarantees {
     margin: 4em 0 2em 0;
   }
@@ -154,6 +174,7 @@ body {
         font-size: 12px;
       }
 
+/******* BLUE SQUARES *******/
     .blue_icon {
       background: linear-gradient(to right,#007399,#0099cc);
       width: 4em;
@@ -172,9 +193,15 @@ body {
         transform: translate(-50%, -50%);
       }
 
+
+/*******************************************************************************/
+/*                         THIRD BLOCK : WHITE N°1                             */
+/*******************************************************************************/
 .white_back1 {
   position: relative;
 }
+
+/******* TITLE + SEARCH + SORT *******/
   .title_brands {
     margin-top: 5em;
     padding-bottom: 0 !important;
@@ -183,6 +210,7 @@ body {
       line-height: 0 !important;
     }
 
+/******* INDIVIDUAL BRANDS *******/
   .brand p {
     background: white;
     border-radius: 5px;
@@ -196,6 +224,7 @@ body {
       text-decoration: none;
     }
 
+/******* "SHOW MORE" BUTTON *******/
   .show_more_brands {
     color: grey !important;
     background: #f8f8f8;
@@ -206,6 +235,8 @@ body {
     padding: 0.8em 1.3em;
   }
 
+
+/******* BLUE CONTACT BANNER *******/
   .contact_devis {
     color: white;
     background: linear-gradient(to right,#007399,#0099cc);
@@ -241,14 +272,20 @@ body {
       }
 
 
+/*******************************************************************************/
+/*                         FOURTH BLOCK : GREY N°2                             */
+/*******************************************************************************/
 .grey_back2 {
   padding-bottom: 4em;
 }
 
+/******* LEFT COLUMN + RIGHT COLUMN *******/
   .breakdown_best {
     margin-top: 6em;
     padding-right: 0 !important;
   }
+
+  /******* LEFT COLUMN *******/
   .col_left {
 
   }
@@ -258,6 +295,7 @@ body {
       width: 30%;
     }
 
+  /******* ARTICLES LIST *******/
     .tags_list {
       margin-left: -1em !important;
       margin-top: 3em;
@@ -266,6 +304,7 @@ body {
         margin: -1em 0 !important;
       }
 
+    /******* INDIVIDUAL ARTICLE *******/
     .tag_article {
       margin: -2em 0;
       color: #606873;
@@ -293,9 +332,12 @@ body {
           }
 
 
+    /******* RIGHT COLUMN *******/
     .col_right {
       padding: 0;
     }
+
+    /******* TITLE + "SHOW ALL" BUTTON *******/
       .title_bests {
         position: relative;
       }
@@ -311,11 +353,14 @@ body {
           text-decoration: none;
         }
 
+    /******* BEST ARTICLES CAROUSEL *******/
     .carousel_bests {
       margin-top: 1em;
       margin-left: 0;
       position: relative;
     }
+
+      /******* LEFT AND RIGHT ARROWS *******/
       .left_arrow {
         width: 30px;
         height: 30px;
@@ -347,6 +392,7 @@ body {
           margin: 0.5em 0.3em;
         }
 
+    /******* INVIDUAL PRODUCTS *******/
       .best_product {
         border-radius: 5px !important;
         width: 47%;
@@ -408,15 +454,21 @@ body {
               margin-bottom: 0.3em;
             }
 
+
+/*******************************************************************************/
+/*                         FIFTH BLOCK : WHITE N°2                             */
+/*******************************************************************************/
 .white_back2 {
   margin: 0 0 0 0 !important;
 }
 
+/******* TITLE FOR BEST MODELS *******/
   .title_bests_brands {
     margin-top: 2em;
     margin-bottom: 1em;
   }
 
+/******* BEST MODELS LIST *******/
   .best_models_brands {
     box-shadow: 0 0 20px #dde4ee;
     border-radius: 5px;
@@ -426,6 +478,8 @@ body {
     position: relative;
     z-index: 1;
   }
+
+  /******* LEFT AND RIGHT ARROWS FOR CAROUSEL *******/
     .left_arrow_models {
       width: 30px;
       height: 30px;
@@ -455,6 +509,8 @@ body {
         margin: 0.5em 0.3em;
         width: 15px;
       }
+
+    /******* EACH LIST COLUMN *******/
     .best_models_brands > div {
       border-right: 1px solid rgba(128, 128, 128, .2);
       position: relative;
@@ -481,6 +537,8 @@ body {
           color: #606873;
         }
 
+
+  /******* "ENTER REFERENCE" BUTTON *******/
   .enter_reference_button {
     color: white !important;
     background: linear-gradient(#ffb84d, #ff9900) !important;
@@ -493,3 +551,6 @@ body {
     margin-bottom: 7em;
     z-index: 50;
   }
+
+
+  /****************************************************************************/
