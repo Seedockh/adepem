@@ -314,7 +314,39 @@ body {
     .carousel_bests {
       margin-top: 1em;
       margin-left: 0;
+      position: relative;
     }
+      .left_arrow {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(#ffb84d, #ff9900);
+        border-radius: 50%;
+        position: absolute;
+        left: -1em;
+        top: 46%;
+        z-index: 50;
+      }
+        .left_arrow img {
+          width: 15px;
+          margin: 0.5em 0.3em;
+        }
+      .right_arrow {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(#ffb84d, #ff9900);
+        border-radius: 50%;
+        padding-left: 0.2em;
+        position: absolute;
+        right: 1em;
+        top: 46%;
+        z-index: 50;
+        text-align: center;
+      }
+        .right_arrow img {
+          width: 15px;
+          margin: 0.5em 0.3em;
+        }
+
       .best_product {
         border-radius: 5px !important;
         width: 47%;
@@ -325,40 +357,139 @@ body {
         .best_picture {
           background: white;
           border-radius: 5px 5px 0 0 !important;
+          border-bottom: 1px solid rgba(128, 128, 128, .2);
         }
+          .best_picture img {
+            border-bottom: 1px solid rgba(128, 128, 128, .2);
+          }
+
         .best_description {
           background: #F1F4F7;
-          border-radius: 0 0 5px 5px !important;
+          border-bottom: 1px solid rgba(128, 128, 128, .1);
           padding: 1em 1em;
         }
-          .best_description hr {
-            margin: 1em 0;
-          }
-            .best_description hr ~ p {
-              padding: 0;
-              color: red;
-            }
           .best_product div p {
             text-align: left;
           }
           .best_link {
             font-size: 18px;
+            margin-bottom: 0;
+            margin-bottom: -1em;
           }
           .best_link:hover {
             text-decoration: none;
           }
           .best_ref {
+            font-size: 10px;
+            margin-top: -1em;
+          }
+          .note {
+            margin-top: -1em;
+            margin-bottom: 0;
+          }
+            .note img {
+              width: 60px;
+            }
+            .note .note_numbers {
+              font-size: 10px;
+              margin-top: -3em;
+            }
 
+          .best_stock {
+            font-size: 12px;
+            border-radius: 0 0 5px 5px !important;
+            background: white;
+            padding: 1em 1em 0 1em;
+            margin-bottom: -1em;
           }
-          .note_numbers {
-
-          }
-          .in_stock {
-            width: 15px;
-            margin-right: 0.5em;
-            margin-bottom: 0.3em;
-          }
+            .in_stock {
+              width: 10px;
+              margin-right: 0.5em;
+              margin-bottom: 0.3em;
+            }
 
 .white_back2 {
-  height: 50vh;
+  margin: 0 0 0 0 !important;
 }
+
+  .title_bests_brands {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .best_models_brands {
+    box-shadow: 0 0 20px #dde4ee;
+    border-radius: 5px;
+    margin-top: 2em;
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+    .left_arrow_models {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(#ffb84d, #ff9900);
+      border-radius: 50%;
+      position: absolute;
+      left: -1em;
+      top: 48%;
+      z-index: 50;
+    }
+      .left_arrow_models img {
+        margin: 0.5em 0.3em;
+        width: 15px;
+      }
+    .right_arrow_models {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(#ffb84d, #ff9900);
+      border-radius: 50%;
+      position: absolute;
+      right: -1em;
+      top: 48%;
+      z-index: 50;
+      text-align: center;
+    }
+      .right_arrow_models img {
+        margin: 0.5em 0.3em;
+        width: 15px;
+      }
+    .best_models_brands > div {
+      border-right: 1px solid rgba(128, 128, 128, .2);
+      position: relative;
+      z-index: 0;
+      padding-bottom: 3em;
+    }
+      .best_models_brands div:last-child {
+        border-right: 0;
+        box-shadow: inset -50px 0 50px 50px white;
+      }
+    .best_models_brands div p {
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+      .best_models_brands div p a:hover {
+        text-decoration: none;
+      }
+      .best_models_brands div p:nth-child(1) {
+        margin-bottom: 1em;
+        text-align: center;
+      }
+        .best_models_brands div p:nth-child(1) a {
+          color: #606873;
+        }
+
+  .enter_reference_button {
+    color: white !important;
+    background: linear-gradient(#ffb84d, #ff9900) !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    padding: 1em 2em;
+    position: absolute;
+    left: 38%;
+    top: -1.5em;
+    margin-bottom: 7em;
+    z-index: 50;
+  }
