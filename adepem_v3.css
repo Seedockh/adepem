@@ -387,7 +387,7 @@ body {
         top: 46%;
         z-index: 50;
       }
-      .left_arrow button:focus, .right_arrow button:focus, .left_arrow_models button:focus, .right_arrow_models button:focus {
+      .left_arrow button:focus, .right_arrow button:focus, .left_arrow_models:focus, .right_arrow_models:focus {
         outline: 0;
       }
         .left_arrow img {
@@ -492,12 +492,13 @@ body {
     margin-top: 2em;
     display: flex;
     height: 100%;
+          width: 100%;
     position: relative;
     z-index: 1;
   }
 
   /******* LEFT AND RIGHT ARROWS FOR CAROUSEL *******/
-    .left_arrow_models button {
+    .left_arrow_models {
       width: 30px;
       height: 30px;
       background: linear-gradient(#ffb84d, #ff9900);
@@ -512,15 +513,14 @@ body {
         margin: 0.5em 0;
         width: 15px;
       }
-
-    .right_arrow_models button {
+    .right_arrow_models {
       width: 30px;
       height: 30px;
       background: linear-gradient(#ffb84d, #ff9900);
       border-radius: 50%;
       border: 0;
       position: absolute;
-      left: 200% !important;
+      right: -1em;
       top: 48%;
       z-index: 50;
       text-align: center;
