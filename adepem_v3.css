@@ -166,6 +166,9 @@ body {
     margin-top: 2em;
     padding: 0.8em 1.3em;
   }
+    .show_more_pieces:focus, .show_more_pieces:focus {
+      outline: 0;
+    }
 
 /******* 3 GUARANTEES ROW *******/
   .guarantees {
@@ -225,6 +228,11 @@ body {
       line-height: 0 !important;
     }
 
+/******* BRANDS LIST ************/
+  .brands_list {
+    position: relative;
+  }
+
 /******* INDIVIDUAL BRANDS *******/
   .brand p {
     background: white;
@@ -246,7 +254,6 @@ body {
     border: 1px solid #f0f0f0 !important;
     border-radius: 3px !important;
     margin-top: 2em;
-    margin-bottom: 6em;
     padding: 0.8em 1.3em;
   }
 
@@ -257,7 +264,9 @@ body {
     background: linear-gradient(to right,#007399,#0099cc);
     border-radius: 7px;
     padding: 0.5em 5em 1em 5em;
-    position: absolute;
+    float: right;
+    position: relative;
+    top: 2em;
     bottom: -2em;
     line-height: 7px;
   }
@@ -478,7 +487,9 @@ body {
 .white_back2 {
   margin: 0 0 0 0 !important;
 }
-
+  .white_back2 .container {
+    position: relative;
+  }
 /******* TITLE FOR BEST MODELS *******/
   .title_bests_brands {
     margin-top: 2em;
@@ -490,13 +501,15 @@ body {
     box-shadow: 0 0 20px #dde4ee;
     border-radius: 5px;
     margin-top: 2em;
-    display: flex;
-    height: 100%;
-          width: 100%;
+    height: 530px;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;
+     overflow: -moz-scrollbars-none;
   }
+  .best_models_brands::-webkit-scrollbar { width: 0 !important }
+
 
   /******* LEFT AND RIGHT ARROWS FOR CAROUSEL *******/
     .left_arrow_models {
@@ -532,33 +545,32 @@ body {
       }
 
     /******* EACH LIST COLUMN *******/
-    .best_models_brands > div {
+    .model_brand {
       border-right: 1px solid rgba(128, 128, 128, .2);
       position: relative;
       z-index: 0;
-      padding-bottom: 3em;
+      height: 100%;
     }
-      .best_models_brands div:last-child {
-        border-right: 0;
+      .model_brand:nth-child(6) {
+        border: 0;
         box-shadow: inset -50px 0 50px 50px white;
         text-overflow:clip;
       }
-    .best_models_brands div p {
+    .model_brand p {
       text-align: left;
       position: relative;
       z-index: 1;
     }
-      .best_models_brands div p a:hover {
+      .model_brand p a:hover {
         text-decoration: none;
       }
-      .best_models_brands div p:nth-child(1) {
+      .model_brand p:nth-child(1) {
         margin-bottom: 1em;
         text-align: center;
       }
-        .best_models_brands div p:nth-child(1) a {
+        .model_brand p:nth-child(1) a {
           color: #606873;
         }
-
 
   /******* "ENTER REFERENCE" BUTTON *******/
   .enter_reference_button {
@@ -593,6 +605,12 @@ body {
     .best_product {
       margin-right: 1em;
     }
+    .left_arrow_models {
+      left: 0;
+    }
+    .right_arrow_models {
+      right: 0;
+    }
     .best_models_brands {
       margin: auto;
     }
@@ -604,6 +622,7 @@ body {
     }
     .breadcrmb {
       font-size: 14px;
+      text-align: center;
     }
     .announce_banner {
       width: 70%;
@@ -618,7 +637,7 @@ body {
       }
 
     .title_pieces {
-      margin-top: 38%;
+      margin-top: 45%;
     }
     .search_input, .sort_piece, .sort_brand {
       margin-top: 3em;
@@ -659,7 +678,7 @@ body {
           }
 
     .show_more_brands {
-      margin-bottom: 28%;
+      margin-bottom: 0;
     }
     .contact_devis {
       margin: 0;
@@ -681,10 +700,14 @@ body {
     }
     .tags_list {
       margin-bottom: 4em;
+      width: 100%;
     }
 
     .title_bests div:nth-child(2) {
       margin-top: 11em;
+    }
+    .model_brand p a {
+      font-size: 12px;
     }
     .enter_reference_button {
       left: 32%;
@@ -692,7 +715,20 @@ body {
   }
 
   @media only screen and (max-width:767px) { /* XS DEVICES */
-
+    .announce_banner {
+      width: 93%;
+      left: auto;
+    }
+    .title_pieces {
+      margin-top: 55%;
+    }
+    .piece {
+      margin-bottom: 1em;
+    }
+    .show_more_pieces {
+      width: 100%;
+      margin-top: 0;
+    }
   }
 
 
