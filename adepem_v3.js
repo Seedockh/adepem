@@ -33,7 +33,6 @@ const goBestRight = ()=>{
 
 //************ 2ND CAROUSEL LEFT FUNCTION **************
 const goBestModelLeft = ()=>{
-/*  if ($(".model_brand").index($(".best_models_brands").find(".model_brand").filter(":visible:first"))+1===$(".model_brand").index($(".best_models_brands").find(".best_product").filter(":visible:last"))) {*/
     let firstModelBest = $(".best_models_brands").find(".model_brand").filter(":visible:first");
     let lastModelBest = $(".best_models_brands").find(".model_brand").filter(":visible:last");;
     let prev;
@@ -46,34 +45,30 @@ const goBestModelLeft = ()=>{
 
     lastModelBest.hide('fast');
     $(firstModelBest).before($(`${".model_brand"}:nth-child(${prev})`).show("fast"));
-/*  }
-  return false;*/
+
+    firstModelBest = $(".best_models_brands").find(".model_brand").filter(":visible:first");
+    if ($(".model_brand").index(firstModelBest)<1) $(".left_arrow_models").hide("fast");
 }
 
 //************ 2ND CAROUSEL RIGHT FUNCTION **************
 const goBestModelRight = ()=>{
-/*  if ($(".model_brand").index($(".best_models_brands").find(".model_brand").filter(":visible:first"))+1===$(".model_brand").index($(".best_models_brands").find(".model_brand").filter(":visible:last"))) {*/
     let firstModelBest = $(".best_models_brands").find(".model_brand").filter(":visible:first");
-    console.log("first : "+$(".model_brand").index(firstModelBest));
     let lastModelBest = $(".best_models_brands").find(".model_brand").filter(":visible:last");
-    console.log("last : "+$(".model_brand").index(lastModelBest));
 
     let next;
-    if ($(".model_brand").index(lastModelBest)+2>=$(".model_brand").length) {
-      next = 2;
-    } else next = $(".model_brand").index(lastModelBest)+6;
-    console.log("next : "+next);
+    if ($(".model_brand").index(lastModelBest)+3>=$(".model_brand").length) {
+      next = $(".model_brand").length;
+      $(".right_arrow_models").hide("fast");
+    } else next = $(".model_brand").index(lastModelBest)+5;
 
     firstModelBest.hide("fast");
     $(lastModelBest).after($(`${".model_brand"}:nth-child(${next})`).show("fast"));
 
     firstModelBest = $(".best_models_brands").find(".model_brand").filter(":visible:first");
-    console.log("first (end): "+$(".model_brand").index(firstModelBest));
-    if ($(".model_brand").index(lastModelBest)===$(".model_brand").length-4) $(".right_arrow_models").hide("fast");
-    if ($(".model_brand").index(firstModelBest)>=1) $(".left_arrow_models").show("fast");
-  /*}
-  return false;*/
+
+    if ($(".model_brand").index(firstModelBest)>=0) $(".left_arrow_models").show("fast");
 }
+
 
 //************ FUNCTION CALLS **************
 $(".left_arrow").click(() => goBestLeft());
