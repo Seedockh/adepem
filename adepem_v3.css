@@ -382,6 +382,7 @@ body {
       margin-top: 1em;
       margin-left: 0;
       position: relative;
+      height:auto;
     }
 
       /******* LEFT AND RIGHT ARROWS *******/
@@ -722,12 +723,16 @@ body {
     .title_pieces {
       margin-top: 55%;
     }
-    .piece {
+    .piece,.brand {
       margin-bottom: 1em;
     }
     .show_more_pieces {
       width: 100%;
       margin-top: 0;
+    }
+    .guarantees_icon_right {
+      position:absolute !important;
+      right: -1em !important;
     }
   }
 

@@ -7,8 +7,7 @@ const goBestLeft = ()=>{
     if ($(".best_product").index(firstBest)<=0) prev = $(".best_product").length+2;
     else prev = $(".best_product").index(firstBest)+2;
 
-
-    lastBest.hide('fast');
+    lastBest.hide("fast");
     $(firstBest).before($(`.best_product:nth-child(${prev})`).show("fast"));
   }
   return false;
