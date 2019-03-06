@@ -767,7 +767,13 @@ body {
         width: 90%;
         margin: auto;
         margin-top:4em;
+        white-space: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+         overflow: -moz-scrollbars-none;
       }
+      .carousel_bests::-webkit-scrollbar { width: 0 !important }
+
       .left_arrow {
         top: 78% !important;
         left: 1em;
@@ -776,19 +782,22 @@ body {
         top: 78% !important;
         right: 1em;
       }
-      .best_product:nth-child(4) {
-        display: none;
-      }
       .best_product {
         border-radius: 5px !important;
         width: 100%;
         margin-right: auto;
         text-align: center;
         box-shadow: 5px 5px 7px #e2e6f1;
+        display: inline-block;
+        float: none;
+      }
+      .best_product:nth-child(n+2) {
+        display: none;
       }
         .best_picture {
           width: 100%;
-          margin: 0 !important -50px !important 0 !important -15px !important;
+          padding-right: -1em !important;
+          margin-right: -1em !important;
         }
   }
 
