@@ -342,10 +342,6 @@ body {
         background: #b3e6ff;
         margin-top: 0.5em;
       }
-
-      .tag_article .col-md-2 {
-
-      }
         .article_title {
           margin-left: -2em !important;
         }
@@ -359,6 +355,7 @@ body {
     /******* RIGHT COLUMN *******/
     .col_right {
       padding: 0;
+      position: relative;
     }
 
     /******* TITLE + "SHOW ALL" BUTTON *******/
@@ -370,12 +367,18 @@ body {
           top: 50%;
           right: 0;
       }
-        .title_bests div:nth-child(2) a {
-          color: #a0b1c3;
-        }
         .title_bests div:nth-child(2) a:hover {
           text-decoration: none;
         }
+        .display_all_button {
+          padding: 0;
+          background: transparent;
+          color: #a0b1c3;
+          border: 0;
+        }
+          .display_all_button:focus {
+            outline: 0;
+          }
 
     /******* BEST ARTICLES CAROUSEL *******/
     .carousel_bests {
@@ -386,41 +389,39 @@ body {
     }
 
       /******* LEFT AND RIGHT ARROWS *******/
-      .left_arrow button {
+      .left_arrow, .right_arrow {
+        box-shadow: 0 0 4px grey;
         width: 30px;
         height: 30px;
         border: 0;
         background: linear-gradient(#ffb84d, #ff9900);
         border-radius: 50%;
         position: absolute;
-        left: -1em;
-        top: 46%;
+        top: 0;
         z-index: 50;
       }
-      .left_arrow button:focus, .right_arrow button:focus, .left_arrow_models:focus, .right_arrow_models:focus {
-        outline: 0;
+      .left_arrow {
+        left: -1em;
+        top: 60%;
+        z-index: 50;
       }
         .left_arrow img {
           width: 15px;
-          margin: 0;
+          margin-bottom: 0.1em;
+          margin-right: 0.1em;
         }
-      .right_arrow button {
-        width: 30px;
-        height: 30px;
-        background: linear-gradient(#ffb84d, #ff9900);
-        border-radius: 50%;
-        border: 0;
-        padding-left: 0.2em;
-        position: absolute;
-        right: 1em;
-        top: 46%;
-        z-index: 50;
-        text-align: center;
+      .right_arrow {
+        right: 0;
+        top: 60%;
       }
         .right_arrow img {
           width: 15px;
-          margin: 0.5em 0.3em;
+          margin-bottom: 0.1em;
+          margin-left: 0.1em;
         }
+      .left_arrow:focus, .right_arrow:focus, .left_arrow_models:focus, .right_arrow_models:focus {
+        outline: 0;
+      }
 
     /******* INVIDUAL PRODUCTS *******/
       .best_product {
@@ -707,6 +708,9 @@ body {
     .title_bests div:nth-child(2) {
       margin-top: 11em;
     }
+    .left_arrow, .right_arrow {
+      top: 78%;
+    }
     .model_brand p a {
       font-size: 12px;
     }
@@ -734,6 +738,58 @@ body {
       position:absolute !important;
       right: -1em !important;
     }
+    .title_brands div h3 {
+      line-height: 25px!important;
+    }
+    .show_more_brands {
+      width: 100%;
+      padding: 1em 0;
+    }
+    .contact_devis {
+      width: 100%;
+      text-align: left;
+    }
+      .devis_intro {
+        line-height: normal;
+      }
+    .breakdown_best div:nth-child(1) {
+      width: 100%;
+    }
+      .article_img {
+        width:auto !important;
+      }
+      .display_all_bests {
+        margin-top: 15em !important;
+      }
+
+      .carousel_bests {
+        height:320px;
+        width: 90%;
+        margin: auto;
+        margin-top:4em;
+      }
+      .left_arrow {
+        top: 78% !important;
+        left: 1em;
+      }
+      .right_arrow {
+        top: 78% !important;
+        right: 1em;
+      }
+      .best_product:nth-child(4) {
+        display: none;
+      }
+      .best_product {
+        border-radius: 5px !important;
+        width: 100%;
+        margin-right: auto;
+        text-align: center;
+        box-shadow: 5px 5px 7px #e2e6f1;
+      }
+        .best_picture {
+          width: 100%;
+          margin: 0 !important -50px !important 0 !important -15px !important;
+        }
   }
 
 

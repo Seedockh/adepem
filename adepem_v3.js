@@ -1,21 +1,28 @@
 //************ 1ST CAROUSEL LEFT FUNCTION **************
 const goBestLeft = ()=>{
-  if ($(".best_product").index($(".carousel_bests").find(".best_product").filter(":visible:first"))+1===$(".best_product").index($(".carousel_bests").find(".best_product").filter(":visible:last"))) {
     let firstBest = $(".carousel_bests").find(".best_product").filter(":visible:first");
-    let lastBest = $(".carousel_bests").find(".best_product").filter(":visible:last");;
-    let prev;
-    if ($(".best_product").index(firstBest)<=0) prev = $(".best_product").length+2;
-    else prev = $(".best_product").index(firstBest)+2;
+    let lastBest = $(".carousel_bests").find(".best_product").filter(":visible:last");
+    let prev; // = firstBest===lastBest ? 0 : 1;
 
-    lastBest.hide("fast");
-    $(firstBest).before($(`.best_product:nth-child(${prev})`).show("fast"));
-  }
-  return false;
+    if (firstBest===lastBest) {
+      if ($(".best_product").index(firstBest)<=0) prev = $(".best_product").length+1;
+      else prev = $(".best_product").index(firstBest)+1;
+      console.log("f=l ; prev : "+prev);
+
+      $(firstBest).before($(`.best_product:nth-child(${prev})`).show("fast"));
+      firstBest.hide("fast");
+
+    } else {
+      if ($(".best_product").index(firstBest)<=0) prev = $(".best_product").length+2;
+      else prev = $(".best_product").index(firstBest)+2;
+
+      lastBest.hide("fast");
+      $(firstBest).before($(`.best_product:nth-child(${prev})`).show("fast"));
+    }
 }
 
 //************ 1ST CAROUSEL RIGHT FUNCTION **************
 const goBestRight = ()=>{
-  if ($(".best_product").index($(".carousel_bests").find(".best_product").filter(":visible:first"))+1===$(".best_product").index($(".carousel_bests").find(".best_product").filter(":visible:last"))) {
     let firstBest = $(".carousel_bests").find(".best_product").filter(":visible:first");
     let lastBest = $(".carousel_bests").find(".best_product").filter(":visible:last");;
 
@@ -26,8 +33,6 @@ const goBestRight = ()=>{
 
     firstBest.hide("fast");
     $(lastBest).after($(`.best_product:nth-child(${next})`).show("fast"));
-  }
-  return false;
 }
 
 //************ 2ND CAROUSEL LEFT FUNCTION **************
