@@ -1,39 +1,43 @@
-//************ 1ST CAROUSEL LEFT FUNCTION **************
-const goBestLeft = ()=>{
-    $('.carousel_bests').animate({scrollLeft:-moveLeft},500);
-    countLeft++;
-    moveLeft += 400;
-    /*let firstBest = $(".carousel_bests").find(".best_product").filter(":visible:first");
-    let lastBest = $(".carousel_bests").find(".best_product").filter(":visible:last");
-    let prev;
+//************ SHOW MORE PIECES ***************
+$('.show_more_pieces').click(()=>{
+  $('.show_more_pieces').hide("fast");
+  $('.pieces_list_line').show('slow');
+});
 
-    if ($(".best_product").index(firstBest)===$(".best_product").index(lastBest)) {
-       prev = $(".best_product").length;
-      $(firstBest).before($(`.best_product:nth-child(${prev})`).css('visibility','visible'));
-      firstBest.css('visibility','hidden');
-    } else {
-      lastBest.css('visibility','hidden');
-      $(firstBest).before($(`.best_product:nth-child(${prev})`).css('visibility','visible'));
-    }*/
-}
+//************ SHOW MORE BRANDS ***************
+$('.show_more_brands').click(()=>{
+  $('.show_more_brands').hide("fast");
+  $('.brands_list_line').show('slow');
+});
 
-//************ 1ST CAROUSEL RIGHT FUNCTION **************
-const goBestRight = ()=>{
-    $('.carousel_bests').animate({scrollLeft:moveRight},500);
-    countRight++;
-    moveRight += 400;
-    /*if ($(".best_product").index(firstBest)===$(".best_product").index(lastBest)) {
-      next = $(".best_product").index(lastBest)+2;
-      console.log("next : "+next);
-      $(firstBest).before($(`.best_product:nth-child(${next})`).css('visibility','visible'));
-      firstBest.css('visibility','hidden');
-    } else {
-      next = ($(".best_product").index(firstBest)+3)>$('.best_product').length ? 1 : $(".best_product").index(firstBest)+3;
-      console.log("next : "+next);
-      firstBest.css('visibility','hidden');
-      $(`.best_product:nth-child(${next})`).css('visibility','visible');
-    }*/
-}
+//************ DISPLAY ALL ***************
+$('.display_all_button').click(()=>{
+  $('.left_arrow').hide(); $('.right_arrow').hide();
+  $('.carousel_bests').css('white-space','normal').css('overflow','visible');
+  $('.best_product').css('float','left').css('display','inline-block');
+  $('.display_all_button').hide();
+})
+
+//************ 1ST CAROUSEL LEFT **************
+$(".left_arrow").click(() => {
+  if($('.carousel_bests').scrollLeft()<=$('.best_product').outerWidth(true)) {
+    $('.left_arrow').css('background','darkgrey').attr('disabled','disabled');
+  }
+  $('.right_arrow').css('background','linear-gradient(#ffb84d, #ff9900)').removeAttr('disabled');
+  $('.carousel_bests').animate({scrollLeft:$('.carousel_bests').scrollLeft()-$('.best_product').outerWidth(true)},300);
+});
+
+//************ 1ST CAROUSEL RIGHT **************
+$(".right_arrow").click(() => {
+  let carouselWidth = ($('.best_product').length-2.5) * $('.best_product').width();
+  console.log(`carousel width : ${carouselWidth}`);
+  console.log($('.carousel_bests').scrollLeft());
+  if($('.carousel_bests').scrollLeft()>=carouselWidth) {
+    $('.right_arrow').css('background','darkgrey').attr('disabled','disabled');
+  }
+  $('.left_arrow').css('background','linear-gradient(#ffb84d, #ff9900)').removeAttr('disabled');
+  $('.carousel_bests').animate({scrollLeft:$('.carousel_bests').scrollLeft()+$('.best_product').outerWidth(true)},300);
+});
 
 //************ 2ND CAROUSEL LEFT FUNCTION **************
 const goBestModelLeft = ()=>{
@@ -82,23 +86,5 @@ const goBestModelRight = ()=>{
 
 
 //************ FUNCTION CALLS **************
-let countLeft = 0; let moveLeft = 400;
-let countRight = 0; let moveRight = 400;
-$(".left_arrow").click(() => goBestLeft());
-$(".right_arrow").click(() => goBestRight());
-
 $(".left_arrow_models").click(() => goBestModelLeft());
 $(".right_arrow_models").click(() => goBestModelRight());
-
-
-//************ SHOW MORE PIECES ***************
-$('.show_more_pieces').click(()=>{
-  $('.show_more_pieces').hide("fast");
-  $('.pieces_list_line').show('slow');
-});
-
-//************ SHOW MORE BRANDS ***************
-$('.show_more_brands').click(()=>{
-  $('.show_more_brands').hide("fast");
-  $('.brands_list_line').show('slow');
-});

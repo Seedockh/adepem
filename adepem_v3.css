@@ -9,7 +9,7 @@ body {
 }
 
 /*******  HIDDEN CLASS *******/
-.hide_element {
+.hide_element, .slider_dots {
   display: none;
 }
 
@@ -408,7 +408,7 @@ body {
       }
       .left_arrow {
         left: -1em;
-        top: 60%;
+        top: 55%;
         z-index: 50;
       }
         .left_arrow img {
@@ -417,8 +417,8 @@ body {
           margin-right: 0.1em;
         }
       .right_arrow {
-        right: 0;
-        top: 60%;
+        right: -2em;
+        top: 55%;
       }
         .right_arrow img {
           width: 15px;
@@ -432,17 +432,20 @@ body {
     /******* INVIDUAL PRODUCTS *******/
       .best_product {
         border-radius: 5px !important;
-        width: 30em !important;
         margin-right: 1.5em;
+        margin-bottom: 2em;
         text-align: center;
         display: inline-block;
         float: none;
         box-shadow: 5px 5px 7px #e2e6f1;
+        background: white;
       }
         .best_picture {
           background: white;
+          padding:-2em;
+          width: 107% !important;
           border-radius: 5px 5px 0 0 !important;
-          border-bottom: 1px solid rgba(128, 128, 128, .2);
+          border-bottom: 1px solid rgba(128, 128, 128, .1);
         }
 
         .best_description {
@@ -452,6 +455,10 @@ body {
         }
           .best_product div p {
             text-align: left;
+          }
+          .best_description {
+            padding-right: 1em!important;
+            overflow: scroll;
           }
           .best_link {
             font-size: 18px;
@@ -476,7 +483,9 @@ body {
               font-size: 10px;
               margin-top: -3em;
             }
-
+            .best_description {
+              background: #f7faff;
+            }
           .best_stock {
             font-size: 12px;
             border-radius: 0 0 5px 5px !important;
@@ -717,7 +726,7 @@ body {
       margin-top: 11em;
     }
     .left_arrow, .right_arrow {
-      top: 78%;
+      top: 75%;
     }
     .model_brand p a {
       font-size: 12px;
@@ -777,24 +786,60 @@ body {
       }
 
       .left_arrow {
-        top: 78% !important;
+        top: 75% !important;
         left: 1em;
       }
       .right_arrow {
-        top: 78% !important;
+        top: 75% !important;
         right: 1em;
       }
       .best_product {
         border-radius: 5px !important;
         width: 100%;
-        margin-right: auto;
+        margin-right: 1em;
         text-align: center;
         box-shadow: 5px 5px 7px #e2e6f1;
       }
         .best_picture {
           width: 100%;
           padding-right: -1em !important;
-          margin-right: -1em !important;
+          margin-left: 0 !important;
+        }
+
+      .best_models_brands {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+        .model_brand {
+          float: none;
+          display: inline-block;
+        }
+        .left_arrow_models, .right_arrow_models {
+            bottom: 0;
+            top: 103%;
+            width: 40px;
+            height: 40px;
+        }
+          .left_arrow_models {
+            padding-right: 0.7em;
+          }
+          .right_arrow_models {
+
+          }
+        .slider_dots {
+          display: inline-block;
+          height: 5em;
+            background: green;
+        }
+          .slider_dots span {
+            background: red;
+            border-radius: 50%;
+          }
+
+        .enter_reference_button {
+          width: 100%;
+          left: 0 !important;
+          top: 6em;
         }
   }
 
