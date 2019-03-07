@@ -830,6 +830,31 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Defines number of displayed elements -->
+    <script type="text/javascript">
+      /* When document's first loading */
+      /*if ($(window).width()+$.position.scrollbarWidth()>767) {
+        $(`.best_product:lt(2)`).css('visibility','visible');
+        $(`.best_product:gt(1)`).css('visibility','hidden');
+      }
+      else {
+        $(`.best_product:lt(1)`).css('visibility','visible');
+        $(`.best_product:gt(0)`).css('visibility','hidden');
+      }*/
+
+      /* When window is resized */
+      /*$( window ).resize(function adjustElements () {
+        if ($(window).width()+$.position.scrollbarWidth()>767) {
+          $(`.best_product:lt(2)`).css('visibility','visible');
+          $(`.best_product:gt(1)`).css('visibility','hidden');
+        }
+        else {
+          $(`.best_product:lt(1)`).css('visibility','visible');
+          $(`.best_product:gt(0)`).css('visibility','hidden');
+        }
+      });*/
+
+    </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./adepem_v3.js"></script>
