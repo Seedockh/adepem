@@ -43,7 +43,7 @@ $(".left_arrow_models").click(() => {
     $('.left_arrow_models').css('background','transparent').attr('disabled','disabled');
   }
   $('.right_arrow_models').css('background','linear-gradient(#ffb84d, #ff9900)').removeAttr('disabled');
-  $('.best_models_brands').animate({scrollLeft:$('.best_models_brands').scrollLeft()-$('.model_brand').outerWidth(true)},300);
+  $('.best_models_brands').animate({scrollLeft:$('.best_models_brands').scrollLeft()-$('.model_brand').outerWidth(true)},200);
 });
 
 //************ 2ND CAROUSEL RIGHT **************
@@ -53,5 +53,5 @@ $(".right_arrow_models").click(() => {
     $('.right_arrow_models').css('background','transparent').attr('disabled','disabled');
   }
   $('.left_arrow_models').css('background','linear-gradient(#ffb84d, #ff9900)').removeAttr('disabled');
-  $('.best_models_brands').animate({scrollLeft:$('.best_models_brands').scrollLeft()+$('.model_brand').outerWidth(true)},300);
+  $('.best_models_brands').animate({scrollLeft:$('.best_models_brands').scrollLeft()+$('.model_brand').outerWidth(true)},200);
 });

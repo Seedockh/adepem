@@ -854,13 +854,13 @@
       $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
 
       $('.left_arrow_models').click(()=>{
-        dotIndex--;
+        if ((dotIndex-1)<1) dotIndex=1; else dotIndex--;
         $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
         $(`.dot:nth-child(${dotIndex+1})`).css('background-color','grey').css('width','5px').css('height','5px');
       })
 
       $('.right_arrow_models').click(()=>{
-        dotIndex++;
+        if ((dotIndex+1)>$('.dot').length) dotIndex=$('.dot').length; else dotIndex++;
         $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
         $(`.dot:nth-child(${dotIndex-1})`).css('background-color','grey').css('width','5px').css('height','5px');
       })
