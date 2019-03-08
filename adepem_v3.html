@@ -834,8 +834,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
     <script type="text/javascript">
-      $('.carousel_bests').scrollLeft($('.best_product').length/3*$('.best_product').outerWidth(true));
+      $('.carousel_bests').scrollLeft($('.best_product').length/3 * $('.best_product').outerWidth(true));
+
+      $('.best_models_brands').scrollLeft(0);
+      $('.left_arrow_models').css('background','transparent').attr('disabled','disabled');
+
+      let i=1;
+      $('.model_brand').each(()=>{
+        if(i<$('.model_brand').length-1) {
+          let clone = $('.dot:last-child').clone();
+          $(`.dot:nth-child(${i})`).after(clone);
+        }
+        i++;
+      });
+
+      let dotIndex = 1;
+      $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
+
+      $('.left_arrow_models').click(()=>{
+        dotIndex--;
+        $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
+        $(`.dot:nth-child(${dotIndex+1})`).css('background-color','grey').css('width','5px').css('height','5px');
+      })
+
+      $('.right_arrow_models').click(()=>{
+        dotIndex++;
+        $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
+        $(`.dot:nth-child(${dotIndex-1})`).css('background-color','grey').css('width','5px').css('height','5px');
+      })
+
     </script>
     <script type="text/javascript" src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./adepem_v3.js"></script>
