@@ -865,6 +865,17 @@
         $(`.dot:nth-child(${dotIndex-1})`).css('background-color','grey').css('width','5px').css('height','5px');
       })
 
+      $(window).resize(()=>{
+        if($(window).outerWidth()<768) {
+          dotIndex = 1;
+          $('.left_arrow_models').css('background','transparent').attr('disabled','disabled');
+          $('.right_arrow_models').css('background','linear-gradient(#ffb84d, #ff9900)').removeAttr('disabled');
+          $('.best_models_brands').scrollLeft(0);
+          $(`.dot`).css('background-color','grey').css('width','5px').css('height','5px');
+          $(`.dot:first-child`).css('background-color','orange').css('width','10px').css('height','10px');
+        }
+      })
+
     </script>
     <script type="text/javascript" src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./adepem_v3.js"></script>

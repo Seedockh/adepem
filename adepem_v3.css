@@ -6,6 +6,7 @@ body {
   color: #606873;
   font-family: 'Saira Semi Condensed', sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 /*******  HIDDEN CLASS *******/
@@ -441,9 +442,7 @@ body {
         background: white;
       }
         .best_picture {
-          background: white;
           padding:-2em;
-          width: 107% !important;
           border-radius: 5px 5px 0 0 !important;
           border-bottom: 1px solid rgba(128, 128, 128, .1);
         }
