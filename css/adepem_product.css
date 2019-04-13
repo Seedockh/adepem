@@ -1,0 +1,45 @@
+.product_banner {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 10px;
+  z-index: 50;
+  box-shadow: 1px 1px 7px #f7f7f7;
+}
+
+.product_banner_table {
+  margin-top: 2em;
+  border-spacing: 10px;
+}
+  .product_banner_table tr td {
+    padding-left: 2em;
+  }
+
+    .product_banner_table tr:first-child td:nth-child(n+2), .product_banner_table tr:nth-child(n+2):nth-child(-n+3) td {
+      border-bottom: 1px solid rgba(207, 209, 214, 1);
+      padding: 0 2em;
+    }
+
+  .productpic {
+    background: white;
+    text-align: center;
+    padding: 2em 0;
+    margin-right: 2em !important;
+  }
+    .pic_product {
+      width: 80%;
+    }
+    .pic_product_small {
+      display: none;
+      width: 100%;
+    }
+
+  .rating_pic {
+    width: 100px;
+  }
+
+  .brand p {
+    height: 80px;
+  }
+      .brand p a img {
+        width: 60%;
+      }
