@@ -836,11 +836,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <script type="text/javascript">
+      // Init carousels scroll position
       $('.carousel_bests').scrollLeft($('.best_product').length/3 * $('.best_product').outerWidth(true));
-
       $('.best_models_brands').scrollLeft(0);
       $('.left_arrow_models').css('background','transparent').attr('disabled','disabled');
 
+      // Generating dots for mobile version 2nd carousel
       let i=1;
       $('.model_brand').each(()=>{
         if(i<$('.model_brand').length-1) {
@@ -850,6 +851,7 @@
         i++;
       });
 
+      // Managing dots background-color here to keep a global index dotIndex
       let dotIndex = 1;
       $(`.dot:nth-child(${dotIndex})`).css('background-color','orange').css('width','10px').css('height','10px');
 
@@ -865,6 +867,7 @@
         $(`.dot:nth-child(${dotIndex-1})`).css('background-color','grey').css('width','5px').css('height','5px');
       })
 
+      // Each time the window is resized, initialize 2nd carousel to 1st position (XS DEVICES)
       $(window).resize(()=>{
         if($(window).outerWidth()<768) {
           dotIndex = 1;
