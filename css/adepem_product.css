@@ -15,7 +15,7 @@
   }
 
     .product_banner_table tr:first-child td:nth-child(n+2), .product_banner_table tr:nth-child(n+2):nth-child(-n+3) td {
-      border-bottom: 1px solid rgba(207, 209, 214, 1);
+      border-bottom: 1px solid rgba(207, 209, 214, 0.5);
       padding: 0 2em;
     }
 
