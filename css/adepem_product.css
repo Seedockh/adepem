@@ -3,7 +3,7 @@
   background: #f7f7f7;
   border-radius: 10px;
   z-index: 50;
-  box-shadow: 1px 1px 7px #f7f7f7;
+  box-shadow: 1px 1px 7px rgba(119, 119, 119, 0.5);
 }
 
 .product_banner_table {
@@ -19,11 +19,16 @@
       padding: 0 2em;
     }
 
+  .product_banner_table tr td h3 {
+    color: #3164b7;
+  }
+
   .productpic {
     background: white;
     text-align: center;
     padding: 2em 0;
     margin-right: 2em !important;
+    box-shadow: 1px 1px 7px rgba(119, 119, 119, 0.1);
   }
     .pic_product {
       width: 80%;
@@ -34,8 +39,48 @@
     }
 
   .rating_pic {
-    width: 100px;
+    width: 80px;
   }
+
+  .discount {
+    color: white !important;
+    background: linear-gradient(#ffb84d, #ff9900) !important;
+    border: 0 !important;
+    border-radius: 0 5px 0 95%;
+    padding: 1em 0.5em 1.3em 1.3em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .green {
+    color: #50dd25;
+  }
+
+  .grey_link {
+    color: grey;
+    text-decoration: underline;
+  }
+
+  .align_right {
+    text-align: right;
+    line-height: 1.5em;
+  }
+    .crossed {
+      text-decoration: line-through;
+      font-size: 80%;
+    }
+
+    .price {
+      color: #ff9900;
+    }
+      .price_numbers {
+        font-size: 300%;
+        font-weight: bold;
+      }
+      .euros {
+        font-size: 200%;
+      }
 
   .brand p {
     height: 80px;
