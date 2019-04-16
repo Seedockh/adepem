@@ -4,6 +4,7 @@
   border-radius: 10px;
   z-index: 50;
   box-shadow: 1px 1px 7px rgba(119, 119, 119, 0.5);
+  margin-bottom: 50em;
 }
 
 .product_banner_table {
@@ -13,25 +14,31 @@
   .product_banner_table tr td {
     padding-left: 2em;
   }
+    .product_banner_table tr td p {
+        font-weight: 200 !important;
+    }
 
-    .product_banner_table tr:first-child td:nth-child(n+2), .product_banner_table tr:nth-child(n+2):nth-child(-n+3) td {
+    .product_banner_table tr td:nth-child(n+2), .product_banner_table tr:nth-child(n+2):nth-child(-n+3) td {
       border-bottom: 1px solid rgba(207, 209, 214, 0.5);
       padding: 0 2em;
     }
 
   .product_banner_table tr td h3 {
-    color: #3164b7;
+    color: #2b61b5;
   }
 
   .productpic {
     background: white;
     text-align: center;
-    padding: 2em 0;
-    margin-right: 2em !important;
+    padding: 0 0;
+    margin-right: 0 !important;
     box-shadow: 1px 1px 7px rgba(119, 119, 119, 0.1);
   }
     .pic_product {
       width: 80%;
+      margin-left: -2em;
+      margin-top: 2em;
+      margin-bottom: 2em;
     }
     .pic_product_small {
       display: none;
@@ -75,16 +82,67 @@
       color: #ff9900;
     }
       .price_numbers {
-        font-size: 300%;
+        font-size: 250%;
         font-weight: bold;
       }
       .euros {
         font-size: 200%;
       }
 
+    .compatibility_button {
+      background: rgba(215, 218, 224, .4) !important;
+      padding: 0.8em 1.2em;
+      margin-top: -0.2em;
+      color: rgba(142, 143, 145, 1) !important
+    }
+
+    .product_less, .product_more {
+      background: linear-gradient(to right,#007399,#0099cc);
+      padding: 0.8em 1.2em;
+      margin-top: -0.2em;
+      border: 0;
+      color: #efefef !important;
+    }
+      .product_more {
+        border-radius: 0 3px 3px 0 !important;
+      }
+      .product_number {
+         display: inline-block;
+         background: white !important;
+         border-top: 1px solid rgba(215, 218, 224, .8);
+         border-bottom: 1px solid rgba(215, 218, 224, .8);
+         padding: 0.8em 1.2em;
+         margin-left: -0.2em;
+         margin-right: -0.2em;
+      }
+      .product_less {
+        border-radius: 3px 0 0 3px !important;
+        margin-left: 1.5em;
+      }
+
+  .add_to_cart {
+    color: white !important;
+    background: linear-gradient(#ffb84d, #ff9900) !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    margin-top: -0.8em;
+    padding: 0.8em 1.3em;
+  }
+
   .brand p {
     height: 80px;
   }
+    .brand p a {
+
+    }
       .brand p a img {
-        width: 60%;
+        width: 80%;
+        margin-top: 2em;
       }
+        .whirlpool a img {
+          margin-top: 0;
+        }
+
+.grey_back1 {
+  padding-top: 35em;
+}
