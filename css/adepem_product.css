@@ -214,10 +214,11 @@
   position: relative;
   height: 250px;
   overflow: auto;
+  margin-top: 1em;
 }
 
 .compatible_product_table {
-  margin-top: 1em;
+
 }
   .center {
     text-align: center;
@@ -254,30 +255,76 @@
   color: white;
   background: linear-gradient(to right,#007399,#0099cc);
   border-radius: 7px;
-  float: right;
   position: relative;
   z-index: 100;
   top: 3em;
+  height: 100px;
   bottom: -2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+  .question_about_order div ~ div {
+
+  }
 
   .hotline_pic_wrapper {
-    position: absolute;
-    left: -1.1em;
+    position: relative;
+    left: -3em;
     height: 100%;
     padding: 0 !important;
   }
   .hotline_pic {
-    width: 100%;
     height: 100%;
     margin: 0 !important;
     border-radius: 7px 0 0 7px;
   }
 
+  .devis_intro {
+    padding: 0.5em;
+    height: 100%;
+    min-width: 470px;
+    margin-left: -3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .devis_intro h4 {
+    margin: 0.5em 0 -0.5em 0;
+  }
+  .devis_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -1em 1em 0 1em;
+    height: 100%;
+  }
+  .devis_phone {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -.1em;
+    padding: .5em .5em;
+  }
+    .devis_phone div:nth-child(1) {
+
+    }
+    .devis_phone div:nth-child(2) {
+      margin: 0 0 0 .5em;
+      width: 200px;
+
+    }
 
 .possible_products {
   margin-top: 7em;
   margin-bottom: 6em;
+}
+
+.best_product {
+  width: 360px;
 }
 
 .guarantees_infos {
@@ -293,3 +340,60 @@
   .comment {
     background: white;
   }
+
+
+
+  /*******************************************************************************/
+  /*                           RESPONSIVE                                        */
+  /*******************************************************************************/
+
+@media only screen and (max-width:1200px) {
+  .cart_settings {
+    padding: 0 !important;
+    text-align: center;
+  }
+    .cart_settings:nth-child(1), .cart_settings:nth-child(1) a {
+      width: 100%;
+    }
+    .cart_settings:nth-child(2), .cart_settings:nth-child(3) {
+      margin-top: 2em;
+      width: 50%;
+    }
+
+  .brands_list_line {
+    justify-content: center;
+  }
+  .brand {
+    width: 30%;
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+
+  .product_informations {
+    margin-top: 53em;
+  }
+  .devis_phone {
+    width: 210px;
+  }
+    .devis_phone div .bold_text ~ p {
+      margin-top: -.2em;
+      line-height: .9em;
+    }
+}
+
+@media only screen and (max-width:990px) { /* MD DEVICES */
+  .product_informations {
+    margin-top: 42em;
+  }
+  .search_input {
+    margin-top: 0;
+  }
+
+}
+
+
+@media only screen and (max-width:767px) { /* SM DEVICES */
+  .product_banner {
+    width: 700px;
+  }
+}
